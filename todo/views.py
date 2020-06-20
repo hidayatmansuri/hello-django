@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 from django.shortcuts import render, redirect, get_object_or_404
 from .models import Item
 from .forms import ItemForm
@@ -56,3 +57,10 @@ def delete_item(request, item_id):
     item = get_object_or_404(Item, id=item_id)
     item.delete()
     return redirect('get_todo_list')
+=======
+from django.shortcuts import render
+
+# Create your views here.
+def get_todo_list(request):
+    return render(request, 'todo/todo_list.html')
+>>>>>>> a68599ac6d5c74b2bd06751bea7c7c1e459d42f8
